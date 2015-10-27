@@ -1,8 +1,8 @@
 <?php
 
-namespace Rey\SimpleSettings\Parser;
+namespace Rey\SimpleSettings\ParserFileParameters;
 
-interface ParserInterface
+interface ParserParametersInterface
 {
     /**
      * Get pattern matching "globbing"

@@ -1,10 +1,10 @@
 <?php
 
-namespace Rey\SimpleSettings\Parser;
+namespace Rey\SimpleSettings\ParserFileParameters;
 
-use Rey\SimpleSettings\Parser\ParserInterface;
+use Rey\SimpleSettings\ParserFileParameters\ParserParametersInterface;
 
-class IniParser implements ParserInterface
+class IniParametersParser implements ParserParametersInterface
 {
     /**
      * {@inheritdoc}
