@@ -1,26 +1,26 @@
 # Simple Settings for Bitrix
 
-Бибилиотека для расширения стандартного .settings.php в CMS Bitrix
+Р‘РёР±РёР»РёРѕС‚РµРєР° РґР»СЏ СЂР°СЃС€РёСЂРµРЅРёСЏ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ .settings.php РІ CMS Bitrix
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Olegator8800/ReySimpleSettings/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Olegator8800/ReySimpleSettings/?branch=master)
 
-Установка
+РЈСЃС‚Р°РЅРѕРІРєР°
 ------------
 
 Composer:
 
     $ composer require rey/simplesettings dev-master
 
-Требования
+РўСЂРµР±РѕРІР°РЅРёСЏ
 ------------
 
 * Bitrix: >=12
 * php: >=5.3.0
 
-Использование
+РСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ
 ------------
 
-Создать файл htdocs\bitrix\.settings_extra.php
+РЎРѕР·РґР°С‚СЊ С„Р°Р№Р» htdocs\bitrix\.settings_extra.php
 
 ```php
 	require_once __DIR__.'/../../vendor/autoload.php';
@@ -33,20 +33,20 @@ Composer:
 	return $config->getExtendedSettings();
 ```
 
-$parametrsFile - путь до основного конфига
-$extendParametrsDir - путь до дириктории в которой могут находится файлы использующиеся для переопределения параметров основного конфига
+$parametrsFile - РїСѓС‚СЊ РґРѕ РѕСЃРЅРѕРІРЅРѕРіРѕ РєРѕРЅС„РёРіР°
+$extendParametrsDir - РїСѓС‚СЊ РґРѕ РґРёСЂРёРєС‚РѕСЂРёРё РІ РєРѕС‚РѕСЂРѕР№ РјРѕРіСѓС‚ РЅР°С…РѕРґРёС‚СЃСЏ С„Р°Р№Р»С‹ РёСЃРїРѕР»СЊР·СѓСЋС‰РёРµСЃСЏ РґР»СЏ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РѕСЃРЅРѕРІРЅРѕРіРѕ РєРѕРЅС„РёРіР°
 
-После чего можно получить доступ к параметрам
+РџРѕСЃР»Рµ С‡РµРіРѕ РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ РґРѕСЃС‚СѓРї Рє РїР°СЂР°РјРµС‚СЂР°Рј
 
 ```php
 	$parameters = Bitrix\Main\Config\Configuration::getInstance();
 
 	$parameters->get('some_value');
-	//или
+	//РёР»Рё
 	$parameters['some_value'];
 ```
 
-Пример файла parameters.ini
+РџСЂРёРјРµСЂ С„Р°Р№Р»Р° parameters.ini
 
 ```ini
 	[connections]
@@ -61,7 +61,7 @@ $extendParametrsDir - путь до дириктории в которой могут находится файлы использ
 dbconn.php
 ------------
 
-Для избавления от дублирования параметров, в файл dbconn.php добавить:
+Р”Р»СЏ РёР·Р±Р°РІР»РµРЅРёСЏ РѕС‚ РґСѓР±Р»РёСЂРѕРІР°РЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ, РІ С„Р°Р№Р» dbconn.php РґРѕР±Р°РІРёС‚СЊ:
 
 ```php
 	require_once __DIR__.'/../../htdocs/bitrix/modules/main/lib/loader.php';
