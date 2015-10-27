@@ -3,7 +3,7 @@
 namespace Rey\SimpleSettings;
 
 use Rey\SimpleSettings\ParserFileParameters\ParserParametersInterface;
-use Rey\SimpleSettings\ParserFileParameters\IniParametersParser;
+use Rey\SimpleSettings\ParserFileParameters\IniParserParameters;
 
 class SettingsExtender
 {
@@ -38,20 +38,20 @@ class SettingsExtender
     }
 
     /**
-     * @param IniParametersParser $parser
+     * @param IniParserParameters $parser
      */
-    public function setParser(IniParametersParser $parser)
+    public function setParser(IniParserParameters $parser)
     {
         $this->parser = $parser;
     }
 
     /**
-     * @return IniParametersParser
+     * @return IniParserParameters
      */
     public function getParser()
     {
         if ($this->parser === null) {
-            $this->parser = new IniParametersParser();
+            $this->parser = new IniParserParameters();
         }
 
         return $this->parser;

@@ -4,7 +4,7 @@ namespace Rey\SimpleSettings\ParserFileParameters;
 
 use Rey\SimpleSettings\ParserFileParameters\ParserParametersInterface;
 
-class IniParametersParser implements ParserParametersInterface
+class IniParserParameters implements ParserParametersInterface
 {
     /**
      * {@inheritdoc}
