@@ -20,7 +20,7 @@ Composer:
 Использование
 ------------
 
-Создать файл htdocs\bitrix\.settings_extra.php
+Создать файл htdocs\bitrix\\.settings_extra.php
 
 ```php
 	require_once __DIR__.'/../../vendor/autoload.php';
@@ -33,8 +33,8 @@ Composer:
 	return $config->getExtendedSettings();
 ```
 
-$parametrsFile - путь до основного конфига
-$extendParametrsDir - путь до дириктории в которой могут находится файлы использующиеся для переопределения параметров основного конфига
+- $parametrsFile - путь до основного конфига
+- $extendParametrsDir - путь до дириктории в которой могут находится файлы использующиеся для переопределения параметров основного конфига
 
 После чего можно получить доступ к параметрам
 
